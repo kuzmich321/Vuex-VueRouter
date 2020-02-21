@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container">
+      <div id="nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/posts">Posts</router-link>
+        <router-link to="/posts/create">Create</router-link>
+      </div>
+      <router-view></router-view>
     </div>
-    <router-view />
   </div>
 </template>
 
@@ -21,6 +24,7 @@
   a {
     font-weight: bold;
     color: #2c3e50;
+    margin: 10px;
     &.router-link-exact-active {
       color: #42b983;
     }
