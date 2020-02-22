@@ -6,15 +6,14 @@
 </template>
 
 <script>
-  import PostList from "../components/post/PostList";
+  import PostList from '../components/post/PostList'
 
 export default {
-  name: 'posts',
   components: {
     PostList
   },
   mounted() {
-    this.$store.dispatch('fetchAll');
+    this.$store.dispatch('fetchAll')
   }
 };
 </script>

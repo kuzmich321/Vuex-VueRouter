@@ -1,21 +1,17 @@
 <template>
   <div class="container">
-    <p v-for="post in posts"> {{ post.title }}</p>
+    <p :key="post.id" v-for="post in posts"> {{ post.title }}</p>
   </div>
 </template>
 
 <script>
+  import {mapState} from 'vuex'
+
 export default {
-  data() {
-    return {
-    }
-  },
   computed: {
-    posts() {
-       return this.$store.state.posts;
-    }
+    ...mapState({
+        posts: state => state.post.posts
+  })
   }
 };
 </script>
-
-<style scoped></style>

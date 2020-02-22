@@ -1,22 +1,18 @@
 <template>
     <div class="container">
-        <post-update-form></post-update-form>
+        <post-form></post-form>
     </div>
 </template>
 
 <script>
-    import PostUpdateForm from "../components/post/PostUpdateForm";
+    import PostForm from '../components/post/PostForm'
 
     export default {
         components: {
-            PostUpdateForm
+            PostForm
         },
         mounted() {
             this.$store.dispatch('fetchOne', this.$route.params.id);
         }
     }
 </script>
-
-<style scoped>
-
-</style>
